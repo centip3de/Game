@@ -41,4 +41,12 @@ public class Level1 implements ILevel
     {
         return entities;
     }
+
+    public void update()
+    {
+        for(Entity entity : entities)
+        {
+            entity.handleInput();
+        }
+    }
 }

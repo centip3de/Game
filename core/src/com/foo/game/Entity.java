@@ -1,5 +1,7 @@
 package com.foo.game;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Texture;
 import com.foo.game.dataclass.Tuple;
 
@@ -63,5 +65,29 @@ public class Entity
     public void destroy()
     {
         texture.get().dispose();
+    }
+
+    public void handleInput()
+    {
+        if(Gdx.input.isKeyPressed(Input.Keys.W))
+        {
+            Tuple<Float, Float> currentPos = position;
+            setPosition(new Tuple<Float, Float>(currentPos.getX(), currentPos.getY() + 1));
+        }
+        if(Gdx.input.isKeyPressed(Input.Keys.S))
+        {
+            Tuple<Float, Float> currentPos = position;
+            setPosition(new Tuple<Float, Float>(currentPos.getX(), currentPos.getY() - 1));
+        }
+        if(Gdx.input.isKeyPressed(Input.Keys.A))
+        {
+            Tuple<Float, Float> currentPos = position;
+            setPosition(new Tuple<Float, Float>(currentPos.getX() - 1, currentPos.getY()));
+        }
+        if(Gdx.input.isKeyPressed(Input.Keys.D))
+        {
+            Tuple<Float, Float> currentPos = position;
+            setPosition(new Tuple<Float, Float>(currentPos.getX() + 1, currentPos.getY()));
+        }
     }
 }

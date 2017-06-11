@@ -8,5 +8,6 @@ public interface ILevel
 {
     void create();
     void destroy();
+    void update();
     ArrayList<Entity> getEntities();
 }

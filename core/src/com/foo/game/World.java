@@ -48,4 +48,9 @@ public class World
            level.destroy();
        }
    }
+
+   public void update()
+   {
+       getCurrentLevel().update();
+   }
 }

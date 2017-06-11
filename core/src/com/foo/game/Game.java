@@ -20,6 +20,10 @@ public class Game extends ApplicationAdapter
 	@Override
 	public void render ()
     {
+        // Update loop
+        world.update();
+
+        // Render loop
         Renderer.render();
 	}
 	
