@@ -2,12 +2,11 @@ package com.foo.game;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.foo.game.dataclass.Tuple;
-import com.foo.game.interfaces.IEntity;
 
 import java.util.Optional;
 import java.util.UUID;
 
-public class Entity implements IEntity
+public class Entity
 {
     protected Tuple<Float, Float> position;
     protected String name;
@@ -61,10 +60,8 @@ public class Entity implements IEntity
         this.position = position;
     }
 
-    public void create()
+    public void destroy()
     {
-
+        texture.get().dispose();
     }
-    public void destroy() {}
-    public void interact() {}
 }

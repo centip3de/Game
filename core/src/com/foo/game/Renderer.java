@@ -38,10 +38,7 @@ public class Renderer
     public static void dispose()
     {
         batch.dispose();
-        for(Entity entity : entities)
-        {
-            entity.destroy();
-        }
+        world.destroy();
     }
 
 }

@@ -40,4 +40,12 @@ public class World
    {
        return levels.get(currentLevel);
    }
+
+   public void destroy()
+   {
+       for(ILevel level : levels)
+       {
+           level.destroy();
+       }
+   }
 }
