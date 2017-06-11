@@ -4,10 +4,17 @@ import com.badlogic.gdx.ApplicationAdapter;
 
 public class Game extends ApplicationAdapter
 {
+    World world;
 	@Override
 	public void create ()
     {
-        Renderer.create();
+        // Handle world setup
+        world = new World();
+        world.addLevel(new Level1());
+        world.start();
+
+        // Handle renderer creation
+        Renderer.create(world);
 	}
 
 	@Override
