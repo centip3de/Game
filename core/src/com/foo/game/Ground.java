@@ -18,4 +18,10 @@ public class Ground extends Entity
     {
         super(name, startingPos, texture);
     }
+
+    @Override
+    public void handleInput()
+    {
+        // Do nothing
+    }
 }
